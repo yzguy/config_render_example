@@ -1,0 +1,30 @@
+---
+global:
+  domain: example.com
+
+devices:
+  switch1:
+    datacenter: dc1
+    rack: A01
+    interfaces:
+      Ethernet1:
+        ip_address: 10.251.0.1/24
+        mode: no switchport
+        enable: true
+      Ethernet2:
+        ip_address: 10.251.1.1/24
+        mode: no switchport
+        enable: true
+
+  switch2:
+    datacenter: dc2
+    rack: A01
+    interfaces:
+      Ethernet1:
+        ip_address: 10.252.0.1/24
+        mode: no switchport
+        enable: true
+      Ethernet2:
+        ip_address: 10.252.1.1/24
+        mode: no switchport
+        enable: true

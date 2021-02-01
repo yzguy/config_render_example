@@ -1,0 +1,14 @@
+!
+!
+hostname {{ hostname }}
+ip domain-name {{ config.datacenter }}.{{ g.domain }}
+!
+{%- for interface_name, interface_config in config.interfaces.items() %}
+!
+interface {{ interface_name }}
+  ip address {{ interface_config.ip_address }}
+  {{ interface_config.mode }}
+  {%- if interface_config.enable %}
+  no shutdown
+  {%- endif -%}
+{%- endfor -%}
