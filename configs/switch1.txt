@@ -1,0 +1,9 @@
+!
+!
+hostname switch1
+ip domain-name dc1.example.com
+!
+!
+interface Ethernet1
+  ip address 10.251.0.1/24
+  no shutdown

@@ -1,0 +1,3 @@
+hostname,datacenter,domain,rack,interface_1_ip,interface_2_ip
+switch1,dc1,"example.com",A01,10.251.0.1/24,10.251.1.1/24
+switch2,dc2,"example.com"A01,10.252.0.1/24,10.252.1.1/24
