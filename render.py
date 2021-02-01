@@ -33,9 +33,10 @@ def with_csv():
             hostname {{ hostname }}
             '''
             # Open hostname-specific file, write out rendered template
-            with open(f"./configs/{row['hostname']}_csv.txt", 'w') as tf:
+            device = row['hostname']
+            with open(f"./configs/{device}_csv.txt", 'w') as tf:
                 tf.write(template.render(row))
-            print(f"Rendered template for {row['hostname']} from CSV")
+            print(f"Rendered template from CSV to ./configs/{device}_csv.txt")
 
 def with_yaml():
     with open('./data.yaml', 'r') as df:
@@ -46,7 +47,7 @@ def with_yaml():
             with open(f"./configs/{device}_yaml.txt", 'w') as tf:
                 tf.write(template.render(g=data['global'], hostname=device, config=device_config))
 
-            print(f"Rendered template for {device} from YAML")
+            print(f"Rendered template from YAML to ./configs/{device}_yaml.txt")
 
 with_csv()
 with_yaml()
