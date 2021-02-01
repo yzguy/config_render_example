@@ -9,8 +9,8 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 -> python render.py
-Rendered template for switch1 from CSV
-Rendered template for switch2 from CSV
-Rendered template for switch1 from YAML
-Rendered template for switch2 from YAML
+Rendered template from CSV to ./configs/switch1_csv.txt
+Rendered template from CSV to ./configs/switch2_csv.txt
+Rendered template from YAML to ./configs/switch1_yaml.txt
+Rendered template from YAML to ./configs/switch2_yaml.txt
 ```
