@@ -35,5 +35,11 @@ with open(data_file, 'r') as df:
         # Open hostname-specific file, write out rendered template
         with open(f"./configs/{row['hostname']}.txt", 'w') as tf:
             tf.write(template.render(row))
+
+        '''
+        You can refer to the keys directly in the template
+        
+        hostname {{ hostname }}
+        '''
         
         print(f"Rendered template for {row['hostname']}")
